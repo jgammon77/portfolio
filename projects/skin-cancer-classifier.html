@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <title>Skin Cancer Decision Tree Classifier | Josh Gammon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-full bg-slate-950 text-slate-100">
+  <div class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+    <a href="../index.html" class="text-xs text-emerald-300 hover:text-emerald-200">&larr; Back to portfolio</a>
+
+    <header class="mt-4 mb-8">
+      <p class="text-[11px] uppercase tracking-[0.2em] text-emerald-300 mb-2">
+        Machine Learning · Healthcare
+      </p>
+      <h1 class="text-2xl md:text-3xl font-semibold mb-2">
+        Skin Cancer Diagnosis Classifier with Decision Trees
+      </h1>
+      <p class="text-slate-300 text-sm md:text-base max-w-2xl">
+        A supervised learning project using a Decision Tree classifier to distinguish between
+        benign and malignant skin cancer cases based on clinical features.
+      </p>
+    </header>
+
+    <section class="mb-8">
+      <h2 class="text-lg font-semibold mb-2">Overview</h2>
+      <p class="text-sm text-slate-200 mb-3">
+        This project uses a dermatology dataset to build a simple yet interpretable model for
+        predicting whether a skin lesion is likely benign or malignant. The focus is on understanding
+        the full ML pipeline: preprocessing, training a Decision Tree, evaluating performance,
+        and explaining feature importance.
+      </p>
+      <p class="text-sm text-slate-200">
+        While not intended for real clinical use, it demonstrates how classification models can
+        support decision-making and how to work responsibly with health-related data.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-lg font-semibold mb-2">Data & Methods</h2>
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 text-sm space-y-3">
+        <div>
+          <h3 class="font-semibold text-emerald-300 text-sm mb-1">Dataset</h3>
+          <ul class="list-disc list-inside space-y-1 text-slate-200">
+            <li>Tabular dataset with clinical features describing skin lesions.</li>
+            <li>Target label indicating benign vs malignant.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-emerald-300 text-sm mb-1">Preprocessing</h3>
+          <ul class="list-disc list-inside space-y-1 text-slate-200">
+            <li>Loaded CSV into pandas and inspected missing values and distributions.</li>
+            <li>Encoded categorical variables as needed (e.g. label encoding / one-hot).</li>
+            <li>Split data into train and test sets (e.g. 80/20).</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-emerald-300 text-sm mb-1">Modeling</h3>
+          <ul class="list-disc list-inside space-y-1 text-slate-200">
+            <li>Trained a <code>DecisionTreeClassifier</code> using scikit-learn.</li>
+            <li>Tuned basic hyperparameters such as tree depth and splitting criteria.</li>
+            <li>Evaluated using accuracy, precision, recall, and confusion matrix.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-emerald-300 text-sm mb-1">Tech Stack</h3>
+          <p class="text-slate-200">
+            Python, scikit-learn, pandas, NumPy, matplotlib, Jupyter
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-lg font-semibold mb-2">Metrics</h2>
+      <p class="text-sm text-slate-200 mb-3">
+        The notebook reports standard classification metrics. Replace the placeholders below with
+        your actual numbers once you finalize the model:
+      </p>
+      <ul class="text-sm text-slate-200 space-y-1 list-disc list-inside">
+        <li>Accuracy: <span class="text-emerald-300 font-mono">XX%</span></li>
+        <li>Precision (malignant class): <span class="text-emerald-300 font-mono">XX%</span></li>
+        <li>Recall (malignant class): <span class="text-emerald-300 font-mono">XX%</span></li>
+      </ul>
+      <p class="text-xs text-slate-400 mt-3">
+        These can be edited directly in the HTML once you confirm final scores from the notebook.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-lg font-semibold mb-3">Key Charts</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <figure class="bg-slate-900/60 border border-slate-800 rounded-xl p-3">
+          <img src="../assets/skin_cancer_confusion_matrix.png"
+               alt="Confusion matrix for skin cancer classifier"
+               class="w-full rounded-md">
+          <figcaption class="mt-2 text-xs text-slate-400">
+            Confusion matrix showing true vs predicted benign/malignant cases.
+          </figcaption>
+        </figure>
+        <figure class="bg-slate-900/60 border border-slate-800 rounded-xl p-3">
+          <img src="../assets/skin_cancer_feature_importance.png"
+               alt="Feature importance bar plot"
+               class="w-full rounded-md">
+          <figcaption class="mt-2 text-xs text-slate-400">
+            Feature importance plot highlighting which clinical features drive the model.
+          </figcaption>
+        </figure>
+      </div>
+      <p class="text-xs text-slate-500 mt-3">
+        Export these plots from the notebook and save them in <code>assets/</code> with matching filenames.
+      </p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-lg font-semibold mb-2">Challenges & Learnings</h2>
+      <ul class="text-sm text-slate-200 space-y-2 list-disc list-inside">
+        <li>Balancing model complexity vs interpretability in a healthcare-related problem.</li>
+        <li>Understanding how class imbalance affects metrics like accuracy vs recall.</li>
+        <li>Using visual tools like confusion matrices to explain misclassifications.</li>
+      </ul>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-lg font-semibold mb-2">Project Links</h2>
+      <div class="flex flex-wrap gap-3 text-xs">
+        <a href="https://github.com/YOUR_USERNAME/YOUR_REPO_SKIN_CANCER" target="_blank"
+           class="inline-flex items-center rounded-full border border-slate-700 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
+          View on GitHub
+        </a>
+        <a href="../notebooks/Decision Tree Classifier_Skin_Cancer.ipynb" target="_blank"
+           class="inline-flex items-center rounded-full border border-slate-700 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
+          View Jupyter Notebook
+        </a>
+      </div>
+    </section>
+
+    <footer class="text-[11px] text-slate-500 text-center mt-8">
+      © <span id="year"></span> Josh Gammon
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

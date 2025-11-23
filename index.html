@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <title>Josh Gammon | SRE, Automation & Data Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-full bg-slate-950 text-slate-100">
+  <!-- Page wrapper -->
+  <div class="max-w-5xl mx-auto px-4 py-10 md:py-14">
+
+    <!-- NAVBAR -->
+    <header class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-10">
+      <div>
+        <h1 class="text-3xl md:text-4xl font-bold tracking-tight">Josh Gammon</h1>
+        <p class="text-slate-400 mt-1">
+          Site Reliability Developer · Data Scientist
+        </p>
+      </div>
+      <nav class="flex flex-wrap gap-3 text-sm text-slate-300">
+        <a href="#projects" class="hover:text-emerald-300">Projects</a>
+        <a href="#skills" class="hover:text-emerald-300">Skills</a>
+        <a href="#about" class="hover:text-emerald-300">About</a>
+        <a href="#contact" class="hover:text-emerald-300">Contact</a>
+        <a href="assets/resume.pdf" target="_blank"
+           class="ml-0 md:ml-4 inline-flex items-center rounded-full border border-emerald-400/60 px-3 py-1 text-xs font-medium text-emerald-200 hover:bg-emerald-400/10">
+          Download Resume
+        </a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="hero" class="mb-14">
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 md:p-8 shadow-lg shadow-emerald-500/5">
+        <p class="text-xs uppercase tracking-[0.2em] text-emerald-300 mb-3">
+          Devops · Data Science  · Automation
+        </p>
+        <h2 class="text-2xl md:text-3xl font-semibold mb-3">
+          I build tools and data projects that make complex systems easier to understand and operate.
+        </h2>
+        <p class="text-slate-300 mb-6 max-w-2xl">
+          I’m a Site Reliability Developer who loves automating repetitive work, analyzing real-world data,
+          and sharing practical knowledge with my team. Here are some of the projects I’ve built around
+          public health data, machine learning, NLP, and predictive modeling.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#projects"
+             class="inline-flex items-center rounded-full bg-emerald-500 px-4 py-2 text-sm font-medium text-slate-950 hover:bg-emerald-400">
+            View Projects
+          </a>
+          <a href="#contact"
+             class="inline-flex items-center rounded-full border border-slate-600 px-4 py-2 text-sm font-medium text-slate-100 hover:border-emerald-400 hover:text-emerald-200">
+            Get in Touch
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="mb-14">
+      <h3 class="text-xl font-semibold mb-4">Skills snapshot</h3>
+      <div class="grid md:grid-cols-3 gap-4 text-sm">
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
+          <h4 class="font-semibold mb-2 text-emerald-300">Languages</h4>
+          <ul class="space-y-1 text-slate-200">
+            <li>Python, Bash, C#, SQL</li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
+          <h4 class="font-semibold mb-2 text-emerald-300">Domains</h4>
+          <ul class="space-y-1 text-slate-200">
+            <li>Devops & Cloud Computing</li>
+            <li>Data Analytics & Machine Learning</li>
+            <li>Automation & Tooling</li>
+            <li>Natural Language Processing</li>
+          </ul>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
+          <h4 class="font-semibold mb-2 text-emerald-300">Tools & Platforms</h4>
+          <ul class="space-y-1 text-slate-200">
+            <li>Linux · Virtualization · Containerization</li>
+            <li>Cloud Infrastructure · Oracle Cloud (OCI) · Amazon Web Services (AWS)</li>
+            <li>Data Science · Jupyter · scikit-learn · pandas · NumPy · NLTK · matplotlib · seaborn </li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="mb-14">
+      <div class="flex items-baseline justify-between mb-6">
+        <h3 class="text-xl font-semibold">Featured Projects</h3>
+        <p class="text-xs text-slate-400">
+          Machine learning, NLP, data analytics, and predictive modeling.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <!-- COVID Data Analytics -->
+        <article class="bg-slate-900/70 border border-slate-800 rounded-2xl p-5 flex flex-col">
+          <div class="flex items-start justify-between gap-3 mb-2">
+            <div>
+              <h4 class="font-semibold text-lg">COVID-19 Data Analytics (Alabama)</h4>
+              <p class="text-xs text-slate-400">
+                Data cleaning, feature engineering, and trend visualization.
+              </p>
+            </div>
+            <span class="text-[10px] px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/40">
+              Data Analysis
+            </span>
+          </div>
+
+          <p class="text-sm text-slate-200 mb-3">
+            Analyzed county-level COVID-19 data for Alabama to explore death rates, vaccination rates,
+            and provider distribution. Engineered metrics such as mortality rate and vaccine coverage,
+            then visualized trends to identify high-risk regions.
+          </p>
+
+          <ul class="text-xs text-slate-300 space-y-1 mb-4 list-disc list-inside">
+            <li>Cleaned and prepared multi-source datasets using pandas.</li>
+            <li>Calculated new features such as Death Rate (%) and Vaccination Rate per 100k.</li>
+            <li>Built bar and heatmap visualizations for insights across 67 counties.</li>
+          </ul>
+
+          <p class="text-xs text-slate-400 mb-4">
+            <span class="font-semibold text-slate-200">Tech:</span>
+            Python, pandas, matplotlib, seaborn, Jupyter
+          </p>
+
+          <div class="mt-auto flex flex-wrap gap-3 text-xs">
+            <a href="/home/joshgammon/portfolio/covid-analysis.html"
+               class="inline-flex items-center rounded-full border border-slate-600 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
+              Project Detail →
+            </a>
+            <a href="https://github.com/YOUR_USERNAME/YOUR_REPO_COVID" target="_blank"
+               class="inline-flex items-center rounded-full border border-slate-600 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
+              View on GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- Decision Tree Skin Cancer Classifier -->
+        <article class="bg-slate-900/70 border border-slate-800 rounded-2xl p-5 flex flex-col">
+          <div class="flex items-start justify-between gap-3 mb-2">
+            <div>
+              <h4 class="font-semibold text-lg">Skin Cancer Diagnosis Classifier</h4>
+              <p class="text-xs text-slate-400">
+                Decision Trees for medical-style classification.
+              </p>
+            </div>
+            <span class="text-[10px] px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/40">
+              Machine Learning
+            </span>
+          </div>
+
+          <p class="text-sm text-slate-200 mb-3">
+            Built a Decision Tree classification model to predict if skin lesion cases are malignant
+            or benign. Focused on the full ML pipeline: preprocessing, training, evaluation,
+            and explaining feature importance.
+          </p>
+
+          <ul class="text-xs text-slate-300 space-y-1 mb-4 list-disc list-inside">
+            <li>Performed preprocessing, encoding, and train–test split on a dermatology dataset.</li>
+            <li>Trained a DecisionTreeClassifier and evaluated with accuracy, precision, and recall.</li>
+            <li>Used confusion matrix and feature importance plots to interpret model behavior.</li>
+          </ul>
+
+          <p class="text-xs text-slate-400 mb-4">
+            <span class="font-semibold text-slate-200">Tech:</span>
+            Python, scikit-learn, pandas, matplotlib, Jupyter
+          </p>
+
+          <div class="mt-auto flex flex-wrap gap-3 text-xs">
+            <a href="projects/skin-cancer-classifier.html"
+               class="inline-flex items-center rounded-full border border-slate-600 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
+              Project Details →
+            </a>
+            <a href="https://github.com/YOUR_USERNAME/YOUR_REPO_SKIN_CANCER" target="_blank"
+               class="inline-flex items-center rounded-full border border-slate-600 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
+              View on GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- NLTK Shakespeare NLP -->
+        <article class="bg-slate-900/70 border border-slate-800 rounded-2xl p-5 flex flex-col md:col-span-2">
+          <div class="flex items-start justify-between gap-3 mb-2">
+            <div>
+              <h4 class="font-semibold text-lg">Shakespeare Text Analysis with NLTK</h4>
+              <p class="text-xs text-slate-400">
+                NLP exploration of Shakespeare’s language and style.
+              </p>
+            </div>
+            <span class="text-[10px] px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/40">
+              NLP
+            </span>
+          </div>
+
+          <p class="text-sm text-slate-200 mb-3">
+            Used NLTK to analyze a corpus of Shakespeare’s plays, from tokenization and cleaning
+            through frequency and bigram analysis. Compared vocabulary and phrase usage to get a feel
+            for how style differs across works.
+          </p>
+
+          <ul class="text-xs text-slate-300 space-y-1 mb-4 list-disc list-inside">
+            <li>Tokenized text, removed stopwords, and normalized tokens.</li>
+            <li>Computed word and bigram frequencies to identify recurring patterns.</li>
+            <li>Explored differences in language between subsets of plays (e.g., tragedies vs comedies).</li>
+          </ul>
+
+          <p class="text-xs text-slate-400 mb-4">
+            <span class="font-semibold text-slate-200">Tech:</span>
+            Python, NLTK, pandas, matplotlib, Jupyter
+          </p>
+
+          <div class="mt-auto flex flex-wrap gap-3 text-xs">
+            <a href="projects/shakespeare-nlp.html"
+               class="inline-flex items-center rounded-full border border-slate-600 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
+              Project Details →
+            </a>
+            <a href="https://github.com/YOUR_USERNAME/YOUR_REPO_SHAKESPEARE" target="_blank"
+               class="inline-flex items-center rounded-full border border-slate-600 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
+              View on GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- Weather Predictor -->
+        <article class="bg-slate-900/70 border border-slate-800 rounded-2xl p-5 flex flex-col md:col-span-2">
+          <div class="flex items-start justify-between gap-3 mb-2">
+            <div>
+              <h4 class="font-semibold text-lg">Weather Predictor (LogReg & SVM)</h4>
+              <p class="text-xs text-slate-400">
+                Binary rain prediction using classic ML models.
+              </p>
+            </div>
+            <span class="text-[10px] px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/40">
+              Machine Learning
+            </span>
+          </div>
+
+          <p class="text-sm text-slate-200 mb-3">
+            Built models to predict whether it will rain tomorrow using historical weather data.
+            Compared Logistic Regression and Support Vector Machines to understand the tradeoffs
+            between a simple linear model and a more flexible classifier.
+          </p>
+
+          <ul class="text-xs text-slate-300 space-y-1 mb-4 list-disc list-inside">
+            <li>Cleaned and normalized features such as temperature, humidity, and rainfall.</li>
+            <li>Trained Logistic Regression and SVM classifiers for a rain / no-rain target.</li>
+            <li>Evaluated models with accuracy, precision, recall, and confusion matrices.</li>
+          </ul>
+
+          <p class="text-xs text-slate-400 mb-4">
+            <span class="font-semibold text-slate-200">Tech:</span>
+            Python, scikit-learn, pandas, NumPy, matplotlib, Jupyter
+          </p>
+
+          <div class="mt-auto flex flex-wrap gap-3 text-xs">
+            <a href="projects/weather-predictor.html"
+               class="inline-flex items-center rounded-full border border-slate-600 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
+              Project Details →
+            </a>
+            <a href="https://github.com/YOUR_USERNAME/YOUR_REPO_WEATHER" target="_blank"
+               class="inline-flex items-center rounded-full border border-slate-600 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
+              View on GitHub
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="mb-14">
+      <h3 class="text-xl font-semibold mb-3">About</h3>
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 text-sm text-slate-200 space-y-3">
+        <p>
+          I enjoy leading teams through incidents, building tools that remove friction from day-to-day work,
+          and turning messy operational realities into something reliable and predictable.
+        </p>
+        <p>
+          A big part of my job is collaboration: mentoring newer teammates, sharing scripts, and documenting
+          the “tribal knowledge” that usually lives in chat logs and someone’s head.
+        </p>
+        <p>
+          On the data side, I like working with real-world datasets—public health, weather, text—to practice
+          the full lifecycle: cleaning, feature engineering, modeling, and communicating results in a way that
+          non-specialists can actually use.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="mb-8">
+      <h3 class="text-xl font-semibold mb-3">Contact</h3>
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 text-sm">
+        <p class="mb-3 text-slate-200">
+          Open to roles where SRE, automation, and data projects overlap.
+        </p>
+        <div class="space-y-1">
+          <p>
+            📧
+            <a href="mailto:you@example.com" class="text-emerald-300 hover:text-emerald-200">
+              gammonj7@gmail.com
+            </a>
+          </p>
+          <p>
+            🌐
+            <a href="https://github.com/YOUR_USERNAME" target="_blank" class="text-emerald-300 hover:text-emerald-200">
+              GitHub
+            </a>
+            ·
+            <a href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank" class="text-emerald-300 hover:text-emerald-200">
+              LinkedIn
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-[11px] text-slate-500 text-center pb-4">
+      © <span id="year"></span> Josh Gammon · Built with Tailwind CSS
+    </footer>
+  </div>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

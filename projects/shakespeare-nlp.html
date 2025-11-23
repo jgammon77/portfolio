@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shakespeare Text Analysis with NLTK | Josh Gammon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-full bg-slate-950 text-slate-100">
+  <div class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+    <a href="../index.html" class="text-xs text-emerald-300 hover:text-emerald-200">&larr; Back to portfolio</a>
+
+    <header class="mt-4 mb-8">
+      <p class="text-[11px] uppercase tracking-[0.2em] text-emerald-300 mb-2">
+        NLP · Text Mining
+      </p>
+      <h1 class="text-2xl md:text-3xl font-semibold mb-2">
+        Shakespeare Text Analysis with NLTK
+      </h1>
+      <p class="text-slate-300 text-sm md:text-base max-w-2xl">
+        Natural Language Processing exploration of Shakespeare’s works using NLTK, focusing on
+        tokenization, frequency analysis, and stylistic comparisons across plays.
+      </p>
+    </header>
+
+    <section class="mb-8">
+      <h2 class="text-lg font-semibold mb-2">Overview</h2>
+      <p class="text-sm text-slate-200 mb-3">
+        This project uses NLTK to process a corpus of Shakespeare’s plays and examine how language,
+        word usage, and patterns differ between works. It demonstrates how to move from raw text
+        to structured insights using standard NLP techniques.
+      </p>
+      <p class="text-sm text-slate-200">
+        The analysis includes tokenization, stopword removal, n-gram extraction, and basic sentiment-style
+        explorations to understand tone and style at a high level.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-lg font-semibold mb-2">Data & Methods</h2>
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 text-sm space-y-3">
+        <div>
+          <h3 class="font-semibold text-emerald-300 text-sm mb-1">Text Corpus</h3>
+          <ul class="list-disc list-inside space-y-1 text-slate-200">
+            <li>Collection of Shakespeare plays loaded as text files / corpus.</li>
+            <li>Subsets for comparing tragedies vs comedies.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-emerald-300 text-sm mb-1">NLP Processing</h3>
+          <ul class="list-disc list-inside space-y-1 text-slate-200">
+            <li>Tokenization of raw text into words using NLTK.</li>
+            <li>Lowercasing, stopword removal, and punctuation stripping.</li>
+            <li>Part-of-speech (POS) tagging and bigram extraction.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-emerald-300 text-sm mb-1">Explorations</h3>
+          <ul class="list-disc list-inside space-y-1 text-slate-200">
+            <li>Word frequency analysis to find the most common tokens.</li>
+            <li>Bigram frequencies to capture common word pairs and phrases.</li>
+            <li>Simple comparisons of vocabulary usage between genres.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-emerald-300 text-sm mb-1">Tech Stack</h3>
+          <p class="text-slate-200">
+            Python, NLTK, pandas, matplotlib, Jupyter
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-lg font-semibold mb-3">Key Charts</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <figure class="bg-slate-900/60 border border-slate-800 rounded-xl p-3">
+          <img src="../assets/shakespeare_top_words.png"
+               alt="Bar chart of most frequent words in Shakespeare corpus"
+               class="w-full rounded-md">
+          <figcaption class="mt-2 text-xs text-slate-400">
+            Top word frequencies after removing stopwords.
+          </figcaption>
+        </figure>
+        <figure class="bg-slate-900/60 border border-slate-800 rounded-xl p-3">
+          <img src="../assets/shakespeare_bigrams.png"
+               alt="Visualization of frequent bigrams"
+               class="w-full rounded-md">
+          <figcaption class="mt-2 text-xs text-slate-400">
+            Frequent bigrams highlighting recurring phrases and constructions.
+          </figcaption>
+        </figure>
+      </div>
+      <p class="text-xs text-slate-500 mt-3">
+        Swap in any plots you generated (frequency distributions, bigram charts, etc.).
+      </p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-lg font-semibold mb-2">Challenges & Learnings</h2>
+      <ul class="text-sm text-slate-200 space-y-2 list-disc list-inside">
+        <li>Dealing with older English spelling and vocabulary when cleaning the text.</li>
+        <li>Understanding how stopword choices affect frequency-based insights.</li>
+        <li>Getting comfortable with NLTK’s tokenization and POS tagging APIs.</li>
+        <li>Seeing how small NLP building blocks can lead to interesting literary insights.</li>
+      </ul>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-lg font-semibold mb-2">Project Links</h2>
+      <div class="flex flex-wrap gap-3 text-xs">
+        <a href="https://github.com/YOUR_USERNAME/YOUR_REPO_SHAKESPEARE" target="_blank"
+           class="inline-flex items-center rounded-full border border-slate-700 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
+          View on GitHub
+        </a>
+        <a href="../notebooks/NLTK_Shakespeare.ipynb" target="_blank"
+           class="inline-flex items-center rounded-full border border-slate-700 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
+          View Jupyter Notebook
+        </a>
+      </div>
+    </section>
+
+    <footer class="text-[11px] text-slate-500 text-center mt-8">
+      © <span id="year"></span> Josh Gammon
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <title>COVID-19 Data Analytics (Alabama) | Josh Gammon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-full bg-slate-950 text-slate-100">
+  <div class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+    <!-- Back link -->
+    <a href="../index.html" class="text-xs text-emerald-300 hover:text-emerald-200">&larr; Back to portfolio</a>
+
+    <!-- Hero -->
+    <header class="mt-4 mb-8">
+      <p class="text-[11px] uppercase tracking-[0.2em] text-emerald-300 mb-2">
+        Data Analytics · Public Health
+      </p>
+      <h1 class="text-2xl md:text-3xl font-semibold mb-2">
+        COVID-19 Data Analytics for Alabama Counties
+      </h1>
+      <p class="text-slate-300 text-sm md:text-base max-w-2xl">
+        Exploratory analysis of county-level COVID-19 data for Alabama, focusing on death rates,
+        vaccination coverage, and provider distribution to understand which regions were most impacted.
+      </p>
+    </header>
+
+    <!-- Overview -->
+    <section class="mb-8">
+      <h2 class="text-lg font-semibold mb-2">Overview</h2>
+      <p class="text-sm text-slate-200 mb-3">
+        This project explores COVID-19 outcomes across all Alabama counties using real-world
+        case, death, testing, vaccination, and provider data. The goal was to
+        clean and combine multiple datasets, engineer meaningful metrics (like death rate and
+        vaccination rate), and visualize differences between counties.
+      </p>
+      <p class="text-sm text-slate-200">
+        The notebook walks through data cleaning, feature engineering, and exploratory visualizations,
+        and can be extended into a foundation for simple dashboards or further modeling.
+      </p>
+    </section>
+
+    <!-- Data & Methods -->
+    <section class="mb-8">
+      <h2 class="text-lg font-semibold mb-2">Data & Methods</h2>
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 text-sm space-y-3">
+        <div>
+          <h3 class="font-semibold text-emerald-300 text-sm mb-1">Datasets</h3>
+          <ul class="list-disc list-inside space-y-1 text-slate-200">
+            <li>County-level COVID-19 cases, deaths, and tests for Alabama.</li>
+            <li>Vaccination data for population 16+ by county.</li>
+            <li>Provider dataset listing vaccine locations by county.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-emerald-300 text-sm mb-1">Key Steps</h3>
+          <ul class="list-disc list-inside space-y-1 text-slate-200">
+            <li>Loaded CSV files into pandas and removed aggregate or invalid rows.</li>
+            <li>Converted numeric fields (cases, deaths, population, doses) to proper types.</li>
+            <li>Engineered features such as:
+              <ul class="list-disc list-inside ml-4 mt-1 text-slate-300 text-xs">
+                <li><code>death_rate = (deaths / cases) * 100</code></li>
+                <li><code>vaccination_rate = fully_vaccinated / population_16_plus</code></li>
+                <li>Provider counts per county.</li>
+              </ul>
+            </li>
+            <li>Merged datasets on county name to align outcomes and access metrics.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-emerald-300 text-sm mb-1">Tech Stack</h3>
+          <p class="text-slate-200">
+            Python, pandas, NumPy, matplotlib, seaborn, Jupyter Notebook
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metrics -->
+    <section class="mb-8">
+      <h2 class="text-lg font-semibold mb-2">Key Metrics & Findings</h2>
+      <ul class="text-sm text-slate-200 space-y-2 list-disc list-inside">
+        <li>Calculated county-level death rates (%) and ranked counties by severity.</li>
+        <li>Computed vaccination coverage for population 16+ and identified counties with low coverage.</li>
+        <li>Counted vaccine providers per county and compared them with vaccination and death rates.</li>
+        <li>Highlighted counties with high death rate and low vaccination rate as potential areas of concern.</li>
+      </ul>
+      <p class="text-xs text-slate-400 mt-3">
+        You can customize this section with specific numbers (e.g., “Top county death rate was X%”)
+        once you finalize the analysis.
+      </p>
+    </section>
+
+    <!-- Charts -->
+    <section class="mb-8">
+      <h2 class="text-lg font-semibold mb-3">Key Charts</h2>
+      <p class="text-sm text-slate-200 mb-4">
+        A few of the visualizations exported from the notebook:
+      </p>
+      <div class="grid md:grid-cols-2 gap-4">
+        <!-- Replace src paths with your exported PNGs -->
+        <figure class="bg-slate-900/60 border border-slate-800 rounded-xl p-3">
+          <img src="../assets/covid_death_rate_by_county.png" alt="Bar chart of COVID-19 death rate by county"
+               class="w-full rounded-md">
+          <figcaption class="mt-2 text-xs text-slate-400">
+            Death rate (%) by county, sorted from highest to lowest.
+          </figcaption>
+        </figure>
+        <figure class="bg-slate-900/60 border border-slate-800 rounded-xl p-3">
+          <img src="../assets/covid_vaccination_rate_by_county.png" alt="Bar chart of vaccination rate by county"
+               class="w-full rounded-md">
+          <figcaption class="mt-2 text-xs text-slate-400">
+            Vaccination coverage for population 16+ across Alabama counties.
+          </figcaption>
+        </figure>
+      </div>
+      <p class="text-xs text-slate-500 mt-3">
+        Export your charts from Jupyter as PNGs and place them in <code>assets/</code> to use these slots.
+      </p>
+    </section>
+
+    <!-- Challenges & Learnings -->
+    <section class="mb-10">
+      <h2 class="text-lg font-semibold mb-2">Challenges & Learnings</h2>
+      <ul class="text-sm text-slate-200 space-y-2 list-disc list-inside">
+        <li>Handling inconsistent or missing county names when merging datasets.</li>
+        <li>Ensuring rate metrics were computed using the correct denominators (e.g., population 16+).</li>
+        <li>Choosing chart types that clearly communicate relative differences between counties.</li>
+        <li>Gained practice in working with real, messy public health data instead of toy datasets.</li>
+      </ul>
+    </section>
+
+    <!-- Links -->
+    <section class="mb-6">
+      <h2 class="text-lg font-semibold mb-2">Project Links</h2>
+      <div class="flex flex-wrap gap-3 text-xs">
+        <a href="https://github.com/YOUR_USERNAME/YOUR_REPO_COVID" target="_blank"
+           class="inline-flex items-center rounded-full border border-slate-700 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
+          View on GitHub
+        </a>
+        <a href="../notebooks/COVID_DataAnalytics.ipynb" target="_blank"
+           class="inline-flex items-center rounded-full border border-slate-700 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
+          View Jupyter Notebook
+        </a>
+      </div>
+    </section>
+
+    <footer class="text-[11px] text-slate-500 text-center mt-8">
+      © <span id="year"></span> Josh Gammon
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

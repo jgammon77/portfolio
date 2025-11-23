@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <title>Weather Predictor (LogReg & SVM) | Josh Gammon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-full bg-slate-950 text-slate-100">
+  <div class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+    <a href="../index.html" class="text-xs text-emerald-300 hover:text-emerald-200">&larr; Back to portfolio</a>
+
+    <header class="mt-4 mb-8">
+      <p class="text-[11px] uppercase tracking-[0.2em] text-emerald-300 mb-2">
+        Machine Learning · Classification
+      </p>
+      <h1 class="text-2xl md:text-3xl font-semibold mb-2">
+        Weather Predictor using Logistic Regression & SVM
+      </h1>
+      <p class="text-slate-300 text-sm md:text-base max-w-2xl">
+        A binary classification model that predicts whether it will rain tomorrow based on
+        historical weather data, comparing Logistic Regression vs Support Vector Machines.
+      </p>
+    </header>
+
+    <section class="mb-8">
+      <h2 class="text-lg font-semibold mb-2">Overview</h2>
+      <p class="text-sm text-slate-200 mb-3">
+        This project tackles a classic ML problem: “Will it rain tomorrow?” using real weather
+        observations like temperature, humidity, and rainfall. The notebook walks through
+        preprocessing, training, evaluation, and model comparison between Logistic Regression
+        and SVM.
+      </p>
+      <p class="text-sm text-slate-200">
+        The goal is to understand tradeoffs between a simple, interpretable linear model and
+        a more flexible SVM classifier.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-lg font-semibold mb-2">Data & Methods</h2>
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 text-sm space-y-3">
+        <div>
+          <h3 class="font-semibold text-emerald-300 text-sm mb-1">Dataset</h3>
+          <ul class="list-disc list-inside space-y-1 text-slate-200">
+            <li>Historical daily weather observations (temperature, humidity, rainfall, etc.).</li>
+            <li>Target label indicating whether it rained the following day.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-emerald-300 text-sm mb-1">Preprocessing</h3>
+          <ul class="list-disc list-inside space-y-1 text-slate-200">
+            <li>Handled missing values and inconsistent entries.</li>
+            <li>Selected a subset of informative features.</li>
+            <li>Standardized/normalized numeric features where appropriate.</li>
+            <li>Split into train and test sets.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-emerald-300 text-sm mb-1">Models</h3>
+          <ul class="list-disc list-inside space-y-1 text-slate-200">
+            <li>Logistic Regression for a baseline linear classifier.</li>
+            <li>Support Vector Machine (SVM) classifier with chosen kernel.</li>
+            <li>Evaluated using accuracy, precision, recall, and confusion matrices.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-emerald-300 text-sm mb-1">Tech Stack</h3>
+          <p class="text-slate-200">
+            Python, scikit-learn, pandas, NumPy, matplotlib, Jupyter
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-lg font-semibold mb-2">Metrics & Model Comparison</h2>
+      <p class="text-sm text-slate-200 mb-3">
+        Fill in your final metrics here (replace XX with actual numbers from the notebook):
+      </p>
+      <div class="grid md:grid-cols-2 gap-4 text-sm text-slate-200">
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
+          <h3 class="font-semibold text-emerald-300 text-sm mb-2">Logistic Regression</h3>
+          <ul class="list-disc list-inside space-y-1">
+            <li>Accuracy: <span class="text-emerald-300 font-mono">XX%</span></li>
+            <li>Precision (rain): <span class="text-emerald-300 font-mono">XX%</span></li>
+            <li>Recall (rain): <span class="text-emerald-300 font-mono">XX%</span></li>
+          </ul>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
+          <h3 class="font-semibold text-emerald-300 text-sm mb-2">SVM</h3>
+          <ul class="list-disc list-inside space-y-1">
+            <li>Accuracy: <span class="text-emerald-300 font-mono">XX%</span></li>
+            <li>Precision (rain): <span class="text-emerald-300 font-mono">XX%</span></li>
+            <li>Recall (rain): <span class="text-emerald-300 font-mono">XX%</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-xs text-slate-400 mt-3">
+        You can also add a short summary below these cards explaining which model you’d choose and why.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-lg font-semibold mb-3">Key Charts</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <figure class="bg-slate-900/60 border border-slate-800 rounded-xl p-3">
+          <img src="../assets/weather_logreg_confusion_matrix.png"
+               alt="Logistic Regression confusion matrix"
+               class="w-full rounded-md">
+          <figcaption class="mt-2 text-xs text-slate-400">
+            Confusion matrix for Logistic Regression predictions.
+          </figcaption>
+        </figure>
+        <figure class="bg-slate-900/60 border border-slate-800 rounded-xl p-3">
+          <img src="../assets/weather_svm_confusion_matrix.png"
+               alt="SVM confusion matrix"
+               class="w-full rounded-md">
+          <figcaption class="mt-2 text-xs text-slate-400">
+            Confusion matrix for SVM predictions.
+          </figcaption>
+        </figure>
+      </div>
+      <p class="text-xs text-slate-500 mt-3">
+        You can also include ROC curves, precision–recall curves, or feature importance plots if available.
+      </p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-lg font-semibold mb-2">Challenges & Learnings</h2>
+      <ul class="text-sm text-slate-200 space-y-2 list-disc list-inside">
+        <li>Handling noisy, real-world weather data with missing or inconsistent values.</li>
+        <li>Seeing how scaling/normalization impacts SVM performance.</li>
+        <li>Comparing a simple linear model to a more flexible SVM in terms of both metrics and interpretability.</li>
+      </ul>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-lg font-semibold mb-2">Project Links</h2>
+      <div class="flex flex-wrap gap-3 text-xs">
+        <a href="https://github.com/YOUR_USERNAME/YOUR_REPO_WEATHER" target="_blank"
+           class="inline-flex items-center rounded-full border border-slate-700 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
+          View on GitHub
+        </a>
+        <a href="../notebooks/Weather Predictor_LogRegression_SVM.ipynb" target="_blank"
+           class="inline-flex items-center rounded-full border border-slate-700 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
+          View Jupyter Notebook
+        </a>
+      </div>
+    </section>
+
+    <footer class="text-[11px] text-slate-500 text-center mt-8">
+      © <span id="year"></span> Josh Gammon
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
