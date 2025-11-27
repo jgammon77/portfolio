@@ -25,7 +25,7 @@
         <a href="#skills" class="hover:text-emerald-300">Skills</a>
         <a href="#about" class="hover:text-emerald-300">About</a>
         <a href="#contact" class="hover:text-emerald-300">Contact</a>
-        <a href="assets/resume.pdf" target="_blank"
+        <a href="assets/Josh Gammon, Resume.docx" target="_blank"
            class="ml-0 md:ml-4 inline-flex items-center rounded-full border border-emerald-400/60 px-3 py-1 text-xs font-medium text-emerald-200 hover:bg-emerald-400/10">
           Download Resume
         </a>
@@ -36,15 +36,14 @@
     <section id="hero" class="mb-14">
       <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 md:p-8 shadow-lg shadow-emerald-500/5">
         <p class="text-xs uppercase tracking-[0.2em] text-emerald-300 mb-3">
-          Devops · Data Science  · Automation
+          Devops · Data Science  · Cloud Computing
         </p>
         <h2 class="text-2xl md:text-3xl font-semibold mb-3">
-          I build tools and data projects that make complex systems easier to understand and operate.
+          I troubleshoot failures across systems, then turn what I learn into tools and automation.
         </h2>
         <p class="text-slate-300 mb-6 max-w-2xl">
-          I’m a Site Reliability Developer who loves automating repetitive work, analyzing real-world data,
-          and sharing practical knowledge with my team. Here are some of the projects I’ve built around
-          public health data, machine learning, NLP, and predictive modeling.
+          I'm a Site Reliability Devloper who likes to solve complex issues. Most problems aren't just technical, they're hidden in logs, misconfigurations, or false assumptions.
+I like tracing those failures across containers, logs, and services then making sure the solution is permanent, clear , and repeatable.
         </p>
         <div class="flex flex-wrap gap-3">
           <a href="#projects"
@@ -66,7 +65,7 @@
         <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
           <h4 class="font-semibold mb-2 text-emerald-300">Languages</h4>
           <ul class="space-y-1 text-slate-200">
-            <li>Python, Bash, C#, SQL</li>
+            <li>Python, Bash, SQL</li>
             <li></li>
           </ul>
         </div>
@@ -83,7 +82,7 @@
           <h4 class="font-semibold mb-2 text-emerald-300">Tools & Platforms</h4>
           <ul class="space-y-1 text-slate-200">
             <li>Linux · Virtualization · Containerization</li>
-            <li>Cloud Infrastructure · Oracle Cloud (OCI) · Amazon Web Services (AWS)</li>
+            <li>Cloud Infrastructure · Oracle Cloud (OCI)</li>
             <li>Data Science · Jupyter · scikit-learn · pandas · NumPy · NLTK · matplotlib · seaborn </li>
             <li></li>
           </ul>
@@ -100,10 +99,95 @@
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-6">
+      <div class="grid gap-6">
+        <!-- Decision Tree Skin Cancer Classifier -->
+        <article class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 flex flex-col md:col-span-2">
+          <div class="flex items-start justify-between gap-3 mb-2">
+            <div>
+              <h4 class="font-semibold text-lg">Skin Disease Diagnosis Classifier</h4>
+              <p class="text-xs text-slate-400">
+                Decision Tree and Random Forest classification.
+              </p>
+            </div>
+            <span class="text-[10px] px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/40">
+              Machine Learning
+            </span>
+          </div>
+
+          <p class="text-sm text-slate-200 mb-3">
+            Built Decision Tree and Random Forest classification models to classify skin disorders. Focused on the full ML pipeline: 
+            exploratory data analysis, model training, and evaluation. 
+          </p>
+
+          <ul class="text-xs text-slate-300 space-y-1 mb-4 list-disc list-inside">
+            <li>Performed preprocessing, encoding, standardization and model training on a dermatology dataset.</li>
+            <li>Trained Decision Tree and Random Forest classifiers and evaluated with accuracy, precision, and recall.</li>
+            <li>Used confusion matrix and feature importance plots to interpret model behavior.</li>
+          </ul>
+
+          <p class="text-xs text-slate-400 mb-4">
+            <span class="font-semibold text-slate-200">Tech:</span>
+            Python, scikit-learn, pandas, matplotlib, Jupyter
+          </p>
+
+          <div class="mt-auto flex flex-wrap gap-3 text-xs">
+            <a href="projects/skin-cancer-classifier.html"
+               class="inline-flex items-center rounded-full border border-slate-600 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
+              Project Details →
+            </a>
+            <a href="https://github.com/jgammon77/portfolio" target="_blank"
+               class="inline-flex items-center rounded-full border border-slate-600 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
+              View on GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- Weather Predictor -->
+        <article class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 flex flex-col md:col-span-2">
+          <div class="flex items-start justify-between gap-3 mb-2">
+            <div>
+              <h4 class="font-semibold text-lg">Weather Predictor - Comparing Logistic Regression & Support Vector Machines (SVM)</h4>
+              <p class="text-xs text-slate-400">
+                Binary rain prediction using ML models.
+              </p>
+            </div>
+            <span class="text-[10px] px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/40">
+              Machine Learning
+            </span>
+          </div>
+
+          <p class="text-sm text-slate-200 mb-3">
+            Built models to predict whether it will rain tomorrow using historical weather data.
+            Compared Logistic Regression and Support Vector Machines to understand the tradeoffs
+            between a simple linear model and a more flexible classifier.
+          </p>
+
+          <ul class="text-xs text-slate-300 space-y-1 mb-4 list-disc list-inside">
+            <li>Cleaned and normalized features such as temperature, humidity, and rainfall.</li>
+            <li>Trained Logistic Regression and SVM classifiers for a rain / no-rain target.</li>
+            <li>Explored various kernel methods and used Grid Search to find optimal hyperparameters.</li>
+            <li>Evaluated models with accuracy, precision, recall, and confusion matrices.</li>
+          </ul>
+
+          <p class="text-xs text-slate-400 mb-4">
+            <span class="font-semibold text-slate-200">Tech:</span>
+            Python, scikit-learn, pandas, NumPy, matplotlib, Jupyter
+          </p>
+
+          <div class="mt-auto flex flex-wrap gap-3 text-xs">
+            <a href="projects/weather-predictor.html"
+               class="inline-flex items-center rounded-full border border-slate-600 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
+              Project Details →
+            </a>
+            <a href="https://github.com/jgammon77/portfolio" target="_blank"
+               class="inline-flex items-center rounded-full border border-slate-600 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
+              View on GitHub
+            </a>
+          </div>
+        </article>
 
         <!-- COVID Data Analytics -->
-        <article class="bg-slate-900/70 border border-slate-800 rounded-2xl p-5 flex flex-col">
+        <article class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 flex flex-col md:col-span-2">
           <div class="flex items-start justify-between gap-3 mb-2">
             <div>
               <h4 class="font-semibold text-lg">COVID-19 Data Analytics (Alabama)</h4>
@@ -134,62 +218,20 @@
           </p>
 
           <div class="mt-auto flex flex-wrap gap-3 text-xs">
-            <a href="/home/joshgammon/portfolio/covid-analysis.html"
-               class="inline-flex items-center rounded-full border border-slate-600 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
-              Project Detail →
-            </a>
-            <a href="https://github.com/YOUR_USERNAME/YOUR_REPO_COVID" target="_blank"
-               class="inline-flex items-center rounded-full border border-slate-600 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
-              View on GitHub
-            </a>
-          </div>
-        </article>
-
-        <!-- Decision Tree Skin Cancer Classifier -->
-        <article class="bg-slate-900/70 border border-slate-800 rounded-2xl p-5 flex flex-col">
-          <div class="flex items-start justify-between gap-3 mb-2">
-            <div>
-              <h4 class="font-semibold text-lg">Skin Cancer Diagnosis Classifier</h4>
-              <p class="text-xs text-slate-400">
-                Decision Trees for medical-style classification.
-              </p>
-            </div>
-            <span class="text-[10px] px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/40">
-              Machine Learning
-            </span>
-          </div>
-
-          <p class="text-sm text-slate-200 mb-3">
-            Built a Decision Tree classification model to predict if skin lesion cases are malignant
-            or benign. Focused on the full ML pipeline: preprocessing, training, evaluation,
-            and explaining feature importance.
-          </p>
-
-          <ul class="text-xs text-slate-300 space-y-1 mb-4 list-disc list-inside">
-            <li>Performed preprocessing, encoding, and train–test split on a dermatology dataset.</li>
-            <li>Trained a DecisionTreeClassifier and evaluated with accuracy, precision, and recall.</li>
-            <li>Used confusion matrix and feature importance plots to interpret model behavior.</li>
-          </ul>
-
-          <p class="text-xs text-slate-400 mb-4">
-            <span class="font-semibold text-slate-200">Tech:</span>
-            Python, scikit-learn, pandas, matplotlib, Jupyter
-          </p>
-
-          <div class="mt-auto flex flex-wrap gap-3 text-xs">
-            <a href="projects/skin-cancer-classifier.html"
+            <a href="projects/covid-analysis.html"
                class="inline-flex items-center rounded-full border border-slate-600 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
               Project Details →
             </a>
-            <a href="https://github.com/YOUR_USERNAME/YOUR_REPO_SKIN_CANCER" target="_blank"
+            <a href="https://github.com/jgammon77/portfolio" target="_blank"
                class="inline-flex items-center rounded-full border border-slate-600 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
               View on GitHub
             </a>
           </div>
         </article>
 
+
         <!-- NLTK Shakespeare NLP -->
-        <article class="bg-slate-900/70 border border-slate-800 rounded-2xl p-5 flex flex-col md:col-span-2">
+        <article class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 flex flex-col md:col-span-2">
           <div class="flex items-start justify-between gap-3 mb-2">
             <div>
               <h4 class="font-semibold text-lg">Shakespeare Text Analysis with NLTK</h4>
@@ -204,14 +246,14 @@
 
           <p class="text-sm text-slate-200 mb-3">
             Used NLTK to analyze a corpus of Shakespeare’s plays, from tokenization and cleaning
-            through frequency and bigram analysis. Compared vocabulary and phrase usage to get a feel
+            through word frequency and analysis. Compared vocabulary and phrase usage to get a feel
             for how style differs across works.
           </p>
 
           <ul class="text-xs text-slate-300 space-y-1 mb-4 list-disc list-inside">
             <li>Tokenized text, removed stopwords, and normalized tokens.</li>
             <li>Computed word and bigram frequencies to identify recurring patterns.</li>
-            <li>Explored differences in language between subsets of plays (e.g., tragedies vs comedies).</li>
+            <li>Assorted words alphabetically and removed duplicates to show unique words.</li>
           </ul>
 
           <p class="text-xs text-slate-400 mb-4">
@@ -224,50 +266,7 @@
                class="inline-flex items-center rounded-full border border-slate-600 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
               Project Details →
             </a>
-            <a href="https://github.com/YOUR_USERNAME/YOUR_REPO_SHAKESPEARE" target="_blank"
-               class="inline-flex items-center rounded-full border border-slate-600 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
-              View on GitHub
-            </a>
-          </div>
-        </article>
-
-        <!-- Weather Predictor -->
-        <article class="bg-slate-900/70 border border-slate-800 rounded-2xl p-5 flex flex-col md:col-span-2">
-          <div class="flex items-start justify-between gap-3 mb-2">
-            <div>
-              <h4 class="font-semibold text-lg">Weather Predictor (LogReg & SVM)</h4>
-              <p class="text-xs text-slate-400">
-                Binary rain prediction using classic ML models.
-              </p>
-            </div>
-            <span class="text-[10px] px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/40">
-              Machine Learning
-            </span>
-          </div>
-
-          <p class="text-sm text-slate-200 mb-3">
-            Built models to predict whether it will rain tomorrow using historical weather data.
-            Compared Logistic Regression and Support Vector Machines to understand the tradeoffs
-            between a simple linear model and a more flexible classifier.
-          </p>
-
-          <ul class="text-xs text-slate-300 space-y-1 mb-4 list-disc list-inside">
-            <li>Cleaned and normalized features such as temperature, humidity, and rainfall.</li>
-            <li>Trained Logistic Regression and SVM classifiers for a rain / no-rain target.</li>
-            <li>Evaluated models with accuracy, precision, recall, and confusion matrices.</li>
-          </ul>
-
-          <p class="text-xs text-slate-400 mb-4">
-            <span class="font-semibold text-slate-200">Tech:</span>
-            Python, scikit-learn, pandas, NumPy, matplotlib, Jupyter
-          </p>
-
-          <div class="mt-auto flex flex-wrap gap-3 text-xs">
-            <a href="projects/weather-predictor.html"
-               class="inline-flex items-center rounded-full border border-slate-600 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
-              Project Details →
-            </a>
-            <a href="https://github.com/YOUR_USERNAME/YOUR_REPO_WEATHER" target="_blank"
+            <a href="https://github.com/jgammon77/portfolio" target="_blank"
                class="inline-flex items-center rounded-full border border-slate-600 px-3 py-1 hover:border-emerald-400 hover:text-emerald-200">
               View on GitHub
             </a>
@@ -277,22 +276,18 @@
       </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- EDUCATION -->
     <section id="about" class="mb-14">
       <h3 class="text-xl font-semibold mb-3">About</h3>
       <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 text-sm text-slate-200 space-y-3">
         <p>
-          I enjoy leading teams through incidents, building tools that remove friction from day-to-day work,
-          and turning messy operational realities into something reliable and predictable.
+          I am a military verteran (and active National Guardsman) currently based out of the Seattle area but willing to relocate for the right role. I enjoy being a part of a collaborative team where I'm comfortable asking (sometimes dumb) questions and bouncing ideas off of each other.
         </p>
         <p>
-          A big part of my job is collaboration: mentoring newer teammates, sharing scripts, and documenting
-          the “tribal knowledge” that usually lives in chat logs and someone’s head.
+          I enjoy working with and for customers to provide the best service and end products they expect and provides increased value and helps to accomplish their goals. 
         </p>
         <p>
-          On the data side, I like working with real-world datasets—public health, weather, text—to practice
-          the full lifecycle: cleaning, feature engineering, modeling, and communicating results in a way that
-          non-specialists can actually use.
+          I have an Undergraduate degree in Applied Computer Science and working on a Master's in Computer Science, which will be completed in December 2026.
         </p>
       </div>
     </section>
@@ -302,22 +297,22 @@
       <h3 class="text-xl font-semibold mb-3">Contact</h3>
       <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 text-sm">
         <p class="mb-3 text-slate-200">
-          Open to roles where SRE, automation, and data projects overlap.
+          Open to Devops, Data Scientist, and Techincal Project Manager roles.
         </p>
         <div class="space-y-1">
           <p>
             📧
-            <a href="mailto:you@example.com" class="text-emerald-300 hover:text-emerald-200">
+            <a href="mailto:gammonj7@gmail.com" class="text-emerald-300 hover:text-emerald-200">
               gammonj7@gmail.com
             </a>
           </p>
           <p>
             🌐
-            <a href="https://github.com/YOUR_USERNAME" target="_blank" class="text-emerald-300 hover:text-emerald-200">
+            <a href="https://github.com/jgammon77" target="_blank" class="text-emerald-300 hover:text-emerald-200">
               GitHub
             </a>
             ·
-            <a href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank" class="text-emerald-300 hover:text-emerald-200">
+            <a href="https://www.linkedin.com/in/joshua-gammon/" target="_blank" class="text-emerald-300 hover:text-emerald-200">
               LinkedIn
             </a>
           </p>
@@ -327,7 +322,7 @@
 
     <!-- FOOTER -->
     <footer class="text-[11px] text-slate-500 text-center pb-4">
-      © <span id="year"></span> Josh Gammon · Built with Tailwind CSS
+      © <span id="year"></span> Josh Gammon · 2025
     </footer>
   </div>
 
