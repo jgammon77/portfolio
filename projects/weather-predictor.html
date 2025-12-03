@@ -18,22 +18,22 @@
         Weather Predictor using Logistic Regression & SVM
       </h1>
       <p class="text-slate-300 text-sm md:text-base max-w-2xl">
-        A binary classification model that predicts whether it will rain tomorrow based on
-        historical weather data, comparing Logistic Regression vs Support Vector Machines.
+        A binary classification model that predicts whether it will rain based on
+        historical weather data using Logistic Regression and Support Vector Machines.
       </p>
     </header>
 
     <section class="mb-8">
       <h2 class="text-lg font-semibold mb-2">Overview</h2>
       <p class="text-sm text-slate-200 mb-3">
-        This project tackles a classic ML problem: “Will it rain tomorrow?” using real weather
-        observations like temperature, humidity, and rainfall. The notebook walks through
+        This project seeks to answer an age old question > Will it rain tomorrow? Using real weather
+        observations like temperature, humidity, and rainfall this notebook walks through
         preprocessing, training, evaluation, and model comparison between Logistic Regression
         and SVM.
       </p>
       <p class="text-sm text-slate-200">
         The goal is to understand tradeoffs between a simple, interpretable linear model and
-        a more flexible SVM classifier.
+        a more flexible and complex SVM classifier.
       </p>
     </section>
 
@@ -51,8 +51,8 @@
           <h3 class="font-semibold text-emerald-300 text-sm mb-1">Preprocessing</h3>
           <ul class="list-disc list-inside space-y-1 text-slate-200">
             <li>Handled missing values and inconsistent entries.</li>
-            <li>Selected a subset of informative features.</li>
-            <li>Standardized/normalized numeric features where appropriate.</li>
+            <li>Removed featured with mostly absent values.</li>
+            <li>Standardized/normalized numeric features using StandardScaler and dummy variables.</li>
             <li>Split into train and test sets.</li>
           </ul>
         </div>
@@ -60,8 +60,8 @@
           <h3 class="font-semibold text-emerald-300 text-sm mb-1">Models</h3>
           <ul class="list-disc list-inside space-y-1 text-slate-200">
             <li>Logistic Regression for a baseline linear classifier.</li>
-            <li>Support Vector Machine (SVM) classifier with chosen kernel.</li>
-            <li>Evaluated using accuracy, precision, recall, and confusion matrices.</li>
+            <li>Support Vector Machine (SVM) classifier with various kernel.</li>
+            <li>Evaluated accuracy for each classifier and multiple SVM kernels.</li>
           </ul>
         </div>
         <div>
@@ -74,30 +74,21 @@
     </section>
 
     <section class="mb-8">
-      <h2 class="text-lg font-semibold mb-2">Metrics & Model Comparison</h2>
-      <p class="text-sm text-slate-200 mb-3">
-        Fill in your final metrics here (replace XX with actual numbers from the notebook):
+      <h2 class="text-lg font-semibold mb-2">Metrics</h2>
+      <p>
+        Support Vector Machine Classifier:
       </p>
-      <div class="grid md:grid-cols-2 gap-4 text-sm text-slate-200">
-        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
-          <h3 class="font-semibold text-emerald-300 text-sm mb-2">Logistic Regression</h3>
-          <ul class="list-disc list-inside space-y-1">
-            <li>Accuracy: <span class="text-emerald-300 font-mono">XX%</span></li>
-            <li>Precision (rain): <span class="text-emerald-300 font-mono">XX%</span></li>
-            <li>Recall (rain): <span class="text-emerald-300 font-mono">XX%</span></li>
-          </ul>
-        </div>
-        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
-          <h3 class="font-semibold text-emerald-300 text-sm mb-2">SVM</h3>
-          <ul class="list-disc list-inside space-y-1">
-            <li>Accuracy: <span class="text-emerald-300 font-mono">XX%</span></li>
-            <li>Precision (rain): <span class="text-emerald-300 font-mono">XX%</span></li>
-            <li>Recall (rain): <span class="text-emerald-300 font-mono">XX%</span></li>
-          </ul>
-        </div>
-      </div>
+      <ul class="text-sm text-slate-200 space-y-1 list-disc list-inside">
+        <li>Linear kernel accuracy: <span class="text-emerald-300 font-mono">84.5%</span></li>
+        <li>RBF kernel accuracy: <span class="text-emerald-300 font-mono">85.3%</span></li>
+        <li>Polynomial kernel accuracy: <span class="text-emerald-300 font-mono">84.0%</span></li>
+      </ul>
+      <br>
+       Logistic Regression Classifier:
+      </p>
+      <ul class="text-sm text-slate-200 space-y-1 list-disc list-inside">
+        <li>Accuracy: <span class="text-emerald-300 font-mono">84.5%</span></li>
       <p class="text-xs text-slate-400 mt-3">
-        You can also add a short summary below these cards explaining which model you’d choose and why.
       </p>
     </section>
 
@@ -105,33 +96,36 @@
       <h2 class="text-lg font-semibold mb-3">Key Charts</h2>
       <div class="grid md:grid-cols-2 gap-4">
         <figure class="bg-slate-900/60 border border-slate-800 rounded-xl p-3">
-          <img src="../assets/weather_logreg_confusion_matrix.png"
-               alt="Logistic Regression confusion matrix"
+          <img src="../assets/RBF_ROC_curve.png"
+               alt="SVM RBF kernel ROC Curve"
                class="w-full rounded-md">
           <figcaption class="mt-2 text-xs text-slate-400">
-            Confusion matrix for Logistic Regression predictions.
-          </figcaption>
-        </figure>
-        <figure class="bg-slate-900/60 border border-slate-800 rounded-xl p-3">
-          <img src="../assets/weather_svm_confusion_matrix.png"
-               alt="SVM confusion matrix"
-               class="w-full rounded-md">
-          <figcaption class="mt-2 text-xs text-slate-400">
-            Confusion matrix for SVM predictions.
+            SVM RBF kernel ROC Curve.
           </figcaption>
         </figure>
       </div>
       <p class="text-xs text-slate-500 mt-3">
-        You can also include ROC curves, precision–recall curves, or feature importance plots if available.
+        ROC curve can show us a general indication on how well the classifier is performing. SVM complexity makes 
+        it difficult to view true classification within multiple hyperplanes.
       </p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-lg font-semibold mb-2">Analysis</h2>
+      <ul class="text-sm text-slate-200 space-y-2 list-disc list-inside">
+        All model accuracies are about equal with the RBF SVM kernel performing the best with 85.3%. I also
+        performed a GridSearchCV to find the optimal hyperparameters for the SVM classifier which returned
+        the exact parameters used in the RBF model training. Feature importance can also be explored to determine
+        what factors may be contributing to the overall classification.
+      </ul>
     </section>
 
     <section class="mb-10">
       <h2 class="text-lg font-semibold mb-2">Challenges & Learnings</h2>
       <ul class="text-sm text-slate-200 space-y-2 list-disc list-inside">
         <li>Handling noisy, real-world weather data with missing or inconsistent values.</li>
-        <li>Seeing how scaling/normalization impacts SVM performance.</li>
-        <li>Comparing a simple linear model to a more flexible SVM in terms of both metrics and interpretability.</li>
+        <li>Comparing a simple linear model to a various SVM kernels in terms of both metrics and interpretability.</li>
+        <li>Improvments to this project include exploring other classifiers, features, and adding more data to see if accuracy improves.</li>
       </ul>
     </section>
 
